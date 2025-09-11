@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prabhava Systems - Smart Waste Management SaaS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Add Bootstrap CSS for React components -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav-brand">
+        <div class="brand-icon">
+          <i class="fas fa-recycle"></i>
+        </div>
+        <span class="nav-title">Prabhava Systems</span>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#technology" class="nav-link">Technology</a></li>
+          <li><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <!-- 🔥 CHANGED: Added dashboard access button -->
+        <button onclick="openDashboard('general')" class="btn btn--secondary btn--sm" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem;">
+    <i class="fas fa-sign-in-alt"></i>
+    <span>Access Dashboard</span>
+  </button>
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-background">
+      <div class="hero-gradient"></div>
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+    </div>
+    <div class="hero-content container">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fas fa-bolt"></i>
+          <span>Revolutionizing Waste Management</span>
+        </div>
+        <h1 class="hero-title">
+          Transform Waste into <span class="gradient-text">Value</span> with AI-Powered Solutions
+        </h1>
+        <p class="hero-subtitle">
+          Harness the power of AI, IoT, and advanced analytics to create sustainable, efficient, and profitable waste management systems that benefit your business and the planet.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">55%</div>
+            <div class="stat-label">Cost Reduction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Sorting Accuracy</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">40%</div>
+            <div class="stat-label">More Recycling</div>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <!-- Updated hero buttons -->
+          <button onclick="openDashboard('general')" class="btn btn--primary btn--lg" style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;">
+  <i class="fas fa-rocket"></i>
+  <span>Launch Dashboard</span>
+</button>
+
+          <a href="#about" class="btn btn--outline btn--lg">
+            <i class="fas fa-info-circle"></i>
+            <span>Learn More</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">About Us</div>
+        <h2 class="section-title">Pioneering the Future of Waste Management</h2>
+        <p class="section-subtitle">We combine cutting-edge technology with environmental consciousness to create solutions that transform how the world handles waste.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="about-text">
+            <p>Our mission is to revolutionize waste management through innovative AI, IoT, and data-driven solutions that minimize environmental impact while maximizing economic value.</p>
+            <p>By turning waste streams into valuable resources, we're building a sustainable, circular economy that benefits businesses, communities, and our planet.</p>
+          </div>
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="feature-content">
+                <h4>Sustainable Innovation</h4>
+                <p>Environmental responsibility at the core of everything we do</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <div class="feature-content">
+                <h4>Advanced Technology</h4>
+                <p>Cutting-edge AI and IoT solutions for optimal efficiency</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-wrapper">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="feature-content">
+                <h4>Global Impact</h4>
+                <p>Creating positive change for communities worldwide</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="visual-card">
+            <div class="card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Smart Analytics</h3>
+            <p>Real-time insights drive better decisions</p>
+          </div>
+          <div class="visual-card">
+            <div class="card-icon">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <h3>Circular Economy</h3>
+            <p>Transform waste into valuable resources</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Services</div>
+        <h2 class="section-title">Comprehensive Smart Waste Solutions</h2>
+        <p class="section-subtitle">From AI-powered sorting to IoT monitoring, we provide end-to-end solutions that transform your waste management operations</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card featured">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="service-badge">Most Popular</div>
+          </div>
+          <h3 class="service-title">AI Waste Sorting</h3>
+          <p class="service-description">Revolutionary automated classification system with 95% accuracy using computer vision and machine learning.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Real-time sorting</li>
+            <li><i class="fas fa-check"></i>Multi-material recognition</li>
+            <li><i class="fas fa-check"></i>Contamination detection</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-wifi"></i>
+            </div>
+          </div>
+          <h3 class="service-title">IoT Smart Sensors</h3>
+          <p class="service-description">Connected monitoring system providing real-time bin status, fill levels, and predictive maintenance alerts.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Fill-level monitoring</li>
+            <li><i class="fas fa-check"></i>Temperature tracking</li>
+            <li><i class="fas fa-check"></i>Smart notifications</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+          </div>
+          <h3 class="service-title">Analytics Dashboard</h3>
+          <p class="service-description">Comprehensive insights platform for cost optimization, sustainability reporting, and performance tracking.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Real-time dashboards</li>
+            <li><i class="fas fa-check"></i>Predictive analytics</li>
+            <li><i class="fas fa-check"></i>Custom reports</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-route"></i>
+            </div>
+          </div>
+          <h3 class="service-title">Route Optimization</h3>
+          <p class="service-description">AI-driven logistics optimization reducing fuel costs and improving collection efficiency by up to 30%.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Dynamic routing</li>
+            <li><i class="fas fa-check"></i>Traffic integration</li>
+            <li><i class="fas fa-check"></i>Fuel optimization</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+          </div>
+          <h3 class="service-title">Mobile Platform</h3>
+          <p class="service-description">Intuitive mobile application for field teams, drivers, and administrators with offline capability.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Driver app</li>
+            <li><i class="fas fa-check"></i>Admin dashboard</li>
+            <li><i class="fas fa-check"></i>Offline sync</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+          </div>
+          <h3 class="service-title">Waste-to-Energy</h3>
+          <p class="service-description">Advanced conversion technology transforming non-recyclable waste into clean, renewable energy.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i>Energy generation</li>
+            <li><i class="fas fa-check"></i>Carbon reduction</li>
+            <li><i class="fas fa-check"></i>Revenue creation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology -->
+  <section class="technology section" id="technology">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Technology</div>
+        <h2 class="section-title">Powered by Cutting-Edge Innovation</h2>
+        <p class="section-subtitle">Our technology stack combines the latest in AI, IoT, and blockchain to deliver unprecedented efficiency and transparency</p>
+      </div>
+      <div class="tech-showcase">
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Artificial Intelligence</h3>
+            <p>Machine learning algorithms for classification, prediction, and process automation with continuous improvement capabilities.</p>
+            <div class="tech-tags">
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Predictive AI</span>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Internet of Things</h3>
+            <p>Connected sensor networks providing real-time monitoring, data collection, and automated system responses.</p>
+            <div class="tech-tags">
+              <span class="tag">Smart Sensors</span>
+              <span class="tag">Edge Computing</span>
+              <span class="tag">5G Connectivity</span>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon">
+              <i class="fas fa-link"></i>
+            </div>
+            <h3>Blockchain</h3>
+            <p>Immutable waste tracking system ensuring transparency, accountability, and secure data management across the supply chain.</p>
+            <div class="tech-tags">
+              <span class="tag">Traceability</span>
+              <span class="tag">Smart Contracts</span>
+              <span class="tag">Data Security</span>
+            </div>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Cloud Infrastructure</h3>
+            <p>Scalable, secure cloud platform ensuring high availability, data protection, and seamless integration capabilities.</p>
+            <div class="tech-tags">
+              <span class="tag">Auto Scaling</span>
+              <span class="tag">Data Analytics</span>
+              <span class="tag">API Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section class="solutions section" id="solutions">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Solutions</div>
+        <h2 class="section-title">Tailored for Every Scale</h2>
+        <p class="section-subtitle">From small businesses to smart cities, our solutions adapt to your specific needs and requirements</p>
+      </div>
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <div class="solution-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h3>Enterprise Solutions</h3>
+          <p>Comprehensive waste management systems for large-scale industrial operations with custom integration capabilities.</p>
+          <div class="solution-features">
+            <span class="feature-tag">Custom Integration</span>
+            <span class="feature-tag">24/7 Support</span>
+            <span class="feature-tag">Compliance Reporting</span>
+          </div>
+          <a href="#contact" class="solution-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Business Solutions</h3>
+          <p>Cost-effective solutions for retail, hospitality, and commercial businesses focusing on efficiency and sustainability.</p>
+          <div class="solution-features">
+            <span class="feature-tag">Quick Setup</span>
+            <span class="feature-tag">Cost Optimization</span>
+            <span class="feature-tag">Easy Management</span>
+          </div>
+          <a href="#contact" class="solution-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Community Solutions</h3>
+          <p>Municipal and community-focused platforms for efficient residential waste collection and citizen engagement.</p>
+          <div class="solution-features">
+            <span class="feature-tag">Citizen App</span>
+            <span class="feature-tag">Route Planning</span>
+            <span class="feature-tag">Public Reporting</span>
+          </div>
+          <a href="#contact" class="solution-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="solution-card">
+          <div class="solution-icon">
+            <i class="fas fa-city"></i>
+          </div>
+          <h3>Smart City Platform</h3>
+          <p>Integrated urban sustainability platform connecting waste management with broader smart city initiatives.</p>
+          <div class="solution-features">
+            <span class="feature-tag">City Integration</span>
+            <span class="feature-tag">Data Analytics</span>
+            <span class="feature-tag">Policy Support</span>
+          </div>
+          <a href="#contact" class="solution-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits section">
+    <div class="container">
+      <div class="benefits-content">
+        <div class="benefits-text">
+          <div class="section-badge">Why Choose Us</div>
+          <h2 class="section-title">Proven Results That Speak for Themselves</h2>
+          <p class="section-subtitle">Our clients consistently achieve remarkable improvements in efficiency, sustainability, and cost savings.</p>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="benefit-content">
+                <div class="benefit-stat">55%</div>
+                <div class="benefit-label">Cost Reduction</div>
+                <p>Average operational cost savings through optimized routing and smart analytics</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <div class="benefit-content">
+                <div class="benefit-stat">40%</div>
+                <div class="benefit-label">More Recycling</div>
+                <p>Increased recycling rates through accurate sorting and contamination reduction</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-gas-pump"></i>
+              </div>
+              <div class="benefit-content">
+                <div class="benefit-stat">30%</div>
+                <div class="benefit-label">Fuel Savings</div>
+                <p>Reduced fuel consumption through AI-optimized collection routes</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div class="benefit-content">
+                <div class="benefit-stat">95%</div>
+                <div class="benefit-label">Accuracy</div>
+                <p>Industry-leading sorting accuracy using advanced computer vision</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="benefits-visual">
+          <div class="visual-dashboard">
+            <div class="dashboard-header">
+              <div class="dashboard-title">Real-time Dashboard</div>
+              <div class="dashboard-status">
+                <div class="status-indicator active"></div>
+                <span>Live</span>
+              </div>
+            </div>
+            <div class="dashboard-metrics">
+              <div class="metric">
+                <div class="metric-value">1,247</div>
+                <div class="metric-label">Tons Processed</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">₹2.3M</div>
+                <div class="metric-label">Cost Saved</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">85%</div>
+                <div class="metric-label">Efficiency</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Contact</div>
+      <h2 class="section-title">Ready to Transform Your Waste Management?</h2>
+      <p class="section-subtitle">Get in touch with our experts or access your role-specific dashboard</p>
+    </div>
+
+      <!--  UPDATED: Dashboard Access Section -->
+<div class="dashboard-access" style="background: var(--color-bg-alt, #f8f9fa); border-radius: 16px; padding: 2rem; margin-bottom: 3rem; text-align: center; border: 1px solid var(--color-border, #e5e7eb);">
+  <div style="margin-bottom: 1.5rem;">
+    <i class="fas fa-users" style="font-size: 2.5rem; color: var(--color-primary, #10b981); margin-bottom: 1rem;"></i>
+    <h3 style="color: var(--color-text, #1f2937); margin-bottom: 0.5rem;">Already have an account?</h3>
+    <p style="color: var(--color-text-light, #6b7280); margin-bottom: 0;">Access your role-specific dashboard to manage operations, view reports, and track performance.</p>
+  </div>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <!--  REMOVED SuperAdmin Button -->
+    
+    <!--  Admin Login -->
+    <button onclick="openDashboard('admin')" class="btn btn--secondary dashboard-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 12px; font-weight: 600; transition: transform 0.3s ease; border: none; cursor: pointer;">
+      <i class="fas fa-user-tie"></i>
+      <span>Admin Login</span>
+    </button>
+    
+    <!--  Driver Login -->
+    <button onclick="openDashboard('driver')" class="btn btn--accent dashboard-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; border-radius: 12px; font-weight: 600; transition: transform 0.3s ease; border: none; cursor: pointer;">
+      <i class="fas fa-truck"></i>
+      <span>Driver Login</span>
+    </button>
+    
+    <!-- Customer Login -->
+<button onclick="openDashboard('customer')" class="btn btn--outline dashboard-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: transparent; color: var(--color-primary, #10b981); border: 2px solid var(--color-primary, #10b981); border-radius: 12px; font-weight: 600; transition: all 0.3s ease; cursor: pointer;">
+      <i class="fas fa-user"></i>
+      <span>Customer Login</span>
+    </button>
+  </div>
+</div>
+
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-content">
+              <h4>Email Us</h4>
+              <a href="mailto:contact@prabhava.org">contact@prabhava.org</a>
+              <p>We'll respond within 24 hours</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-content">
+              <h4>Connect on LinkedIn</h4>
+              <a href="https://www.linkedin.com/company/prabhava-systems-private-limited" target="_blank">Follow our updates</a>
+              <p>Latest news and insights</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-content">
+              <h4>Visit Our Office</h4>
+              <p>India</p>
+              <p>Schedule an in-person meeting</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" class="form-control">
+              <option value="">Select a topic</option>
+              <option value="demo">Request a Demo</option>
+              <option value="pricing">Pricing Information</option>
+              <option value="partnership">Partnership Opportunities</option>
+              <option value="support">Technical Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us about your waste management challenges..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full-width">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <div class="brand-text">
+            <h3>Prabhava Systems</h3>
+            <p>Revolutionizing waste management through AI, IoT, and analytics to create a sustainable future for all.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Company</h4>
+            <a href="#about">About Us</a>
+            <a href="#technology">Technology</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="link-group">
+            <h4>Solutions</h4>
+            <a href="#services">Services</a>
+            <a href="#solutions">Industries</a>
+            <a href="#contact">Get Demo</a>
+          </div>
+          <div class="link-group">
+            <h4>Support</h4>
+            <a href="#contact">Help Center</a>
+            <a href="mailto:contact@prabhava.org">Technical Support</a>
+            <!-- 🔥 CHANGED: Added dashboard access link -->
+<a href="javascript:void(0)" onclick="openDashboard('general')">Dashboard Login</a>
+          </div>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/prabhava-systems-private-limited" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Prabhava Systems Private Limited. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+    <div id="root"></div>
+
+</body>
+</html>
